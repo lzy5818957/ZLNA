@@ -1,0 +1,3 @@
+<resources>
+    <bool name="compact_layout">false</bool>
+</resources>

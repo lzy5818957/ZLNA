@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application android:label="ZLNA" android:icon="@drawable/ic_zlna" android:roundIcon="@drawable/ic_zlna" android:theme="@style/AppTheme" android:allowBackup="false" android:fullBackupContent="false" android:dataExtractionRules="@xml/data_extraction_rules" android:supportsRtl="true" android:usesCleartextTraffic="true" android:resizeableActivity="true">
+        <property android:name="android.window.PROPERTY_COMPAT_ALLOW_SMALL_COVER_SCREEN" android:value="1" />
+        <property android:name="miui.continuity.policy" android:value="5" />
+        <meta-data android:name="android.supports_size_changes" android:value="true" />
+        <meta-data android:name="miui.supportAppContinuity" android:value="true" />
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <service android:name=".SharingService" android:exported="false" android:foregroundServiceType="connectedDevice" android:stopWithTask="false" />
+    </application>
+</manifest>

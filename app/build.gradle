@@ -1,0 +1,18 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.zlna'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'app.zlna'; minSdk 26; targetSdk 36; versionCode 5; versionName '0.2.2'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildFeatures { buildConfig true }
+    androidResources { generateLocaleConfig = true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    buildTypes { release { minifyEnabled false } }
+}
+dependencies {
+    implementation project(':core')
+    androidTestImplementation 'androidx.test:runner:1.7.0'
+    androidTestImplementation 'junit:junit:4.13.2'
+}
